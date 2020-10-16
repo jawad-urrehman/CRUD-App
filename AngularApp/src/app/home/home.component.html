@@ -1,0 +1,23 @@
+<table class="table table-bordered">
+      <thead>
+        <tr>
+          <td> ItemName</td>
+          <td>Seller </td>
+          <td>Image</td>
+          <td width="275" align="center">Action</td>
+        </tr>
+      </thead>
+      <tbody>
+         <tr *ngFor = "let itm of items" >
+            <td>{{itm.name}}</td>
+            <td>{{itm.seller}}</td>
+            <td><img  class = "image" src="{{itm.image2}}"></td>
+            <td width="275"> 
+                <a class="btn btn-info" routerLink="/show/{{itm._id}}">Detail</a>
+                <a class="btn btn-danger" (click)="deleteItem(itm._id)">Delete</a>
+            </td>
+         </tr>
+  
+   
+      </tbody>
+    </table>
